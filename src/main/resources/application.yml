@@ -1,4 +1,5 @@
 spring:
+  #MySQL数据库配置
   datasource:
     url: jdbc:mysql://localhost:3306/blog?autoReconnect=true&failOverReadOnly=false&useSSL=false&characterEncoding=utf8
     type: com.alibaba.druid.pool.DruidDataSource
@@ -14,14 +15,21 @@ spring:
       test-on-borrow: false
       test-while-idle: true
       test-on-return: false
+  #jpa配置
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
+  #elasticsearch配置
   data:
     elasticsearch:
       cluster-nodes: 127.0.0.1:9300
       repositories:
         enabled: true
       cluster-name: my-application
-
+  #模板配置
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    encoding: UTF-8
+    cache: false

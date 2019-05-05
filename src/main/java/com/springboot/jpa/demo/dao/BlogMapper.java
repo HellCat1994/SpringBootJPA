@@ -6,4 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @author whg
  */
 public interface BlogMapper extends JpaRepository<BlogTest,String> {
+
 }
